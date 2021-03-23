@@ -3,20 +3,16 @@ import styled from "styled-components";
 const Navbar = () => {
   return (
     <Nav>
-      <h1>
+      <h1 id="logo">
         <a href="#">Capture</a>
       </h1>
       <ul>
         <li>
           <a href="#">1. About Us</a>
         </li>
-      </ul>
-      <ul>
         <li>
           <a href="#">2. Our Work</a>
         </li>
-      </ul>
-      <ul>
         <li>
           <a href="#">3. Contact Us</a>
         </li>
@@ -37,8 +33,17 @@ const Nav = styled.nav`
     color: white;
   }
   ul {
-    display: flex;
     list-style: none;
+    display: flex;
+  }
+  #logo {
+    font-size: 1.5rem;
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+  }
+  li {
+    padding-left: 5rem;
+    position: relative;
   }
 `;
 export default Navbar;
