@@ -1,6 +1,7 @@
 import home1 from "../img/home1.png";
 //Style
 import styled from "styled-components";
+
 const Aboutsection = () => {
   return (
     <About>

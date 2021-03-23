@@ -1,6 +1,10 @@
+//Importing styles
+import styled from "styled-components";
+import { About } from "../Styles";
+
 const FaqSection = () => {
   return (
-    <div className="faq">
+    <Faq>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
@@ -13,6 +17,7 @@ const FaqSection = () => {
           </p>
         </div>
       </div>
+      <div className="faq-line"></div>
       <div className="question">
         <h4>Daily Schedulw</h4>
         <div className="answer">
@@ -21,6 +26,7 @@ const FaqSection = () => {
             adipisicing elit. Reprehenderit, animi!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>Different payment methods</h4>
@@ -30,6 +36,7 @@ const FaqSection = () => {
             adipisicing elit. Reprehenderit, animi!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>What product do you offer?</h4>
@@ -39,9 +46,34 @@ const FaqSection = () => {
             adipisicing elit. Reprehenderit, animi!
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
-    </div>
+    </Faq>
   );
 };
+
+const Faq = styled(About)`
+  display: block;
+  span {
+    display: block;
+  }
+  h2 {
+    padding-bottom: 0.5rem;
+    font-weight: lighter;
+  }
+  .faq-line {
+    background: #cccc;
+    height: 0.2rem;
+    margin: 1rem 0rem;
+    width: 100%;
+  }
+  .question {
+    padding: 1rem 0rem;
+    cursor: pointer;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+`;
 
 export default FaqSection;
