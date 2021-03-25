@@ -3,6 +3,7 @@ import home1 from "../img/home1.png";
 import styled from "styled-components/macro";
 //Framer Motion
 import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../pages/animation";
 
 const Aboutsection = () => {
   return (
@@ -10,25 +11,29 @@ const Aboutsection = () => {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2>We Work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>We Work to make</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               Your <span>Dreams </span> come
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>true</motion.h2>
+            <motion.h2 variants={titleAnim}>true</motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professonals with amazing skils
-        </p>
-        <button>Contact us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact us</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt="Guy with the camera" />
+        <motion.img
+          variants={photoAnim}
+          src={home1}
+          alt="Guy with the camera"
+        />
       </Image>
     </About>
   );
