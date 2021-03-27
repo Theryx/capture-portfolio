@@ -32,7 +32,9 @@ const Aboutsection = () => {
         <motion.img
           variants={photoAnim}
           src={home1}
-          alt="Guy with the camera"
+          alt='Guy with the camera'
+          initial='hidden'
+          animate='show'
         />
       </Image>
     </About>

@@ -6,27 +6,29 @@ import Navbar from "./components/Navbar";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import MovieDetail from "./pages/MovieDetail";
+
 //Animation
 import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
   return (
-    <div className="App">
+    <div className='App'>
       <GlobalStyle />
+
       <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
+          <Route path='/' exact>
             <AboutUs />
           </Route>
-          <Route path="/work" exact>
+          <Route path='/work' exact>
             <OurWork />
           </Route>
-          <Route path="/work/:id">
+          <Route path='/work/:id'>
             <MovieDetail />
           </Route>
-          <Route path="/contact">
+          <Route path='/contact'>
             <ContactUs />
           </Route>
         </Switch>

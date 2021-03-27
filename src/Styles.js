@@ -7,6 +7,10 @@ export const About = styled.div`
   justify-content: space-between;
   padding: 4rem 4rem;
   color: white;
+  @media (max-width: 1000px) {
+    display: block;
+    padding: 2rem 2rem;
+  }
 `;
 export const Description = styled.div`
   flex: 1;
